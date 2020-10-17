@@ -116,11 +116,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="com/ericlam/mc/eld/ServiceCollection.html#addService(java.lang.Class,java.lang.Class)">addService(Class&lt;T&gt;, Class&lt;L&gt;)</a></span> - Method in interface com.ericlam.mc.eld.<a href="com/ericlam/mc/eld/ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a></dt>
 <dd>
-<div class="block">註冊服務</div>
+<div class="block">註冊服務, 如果已被註冊，則添加新的實作</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/ericlam/mc/eld/ServiceCollection.html#addServices(java.lang.Class,java.util.Map)">addServices(Class&lt;T&gt;, Map&lt;String, Class&lt;? extends T&gt;&gt;)</a></span> - Method in interface com.ericlam.mc.eld.<a href="com/ericlam/mc/eld/ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a></dt>
 <dd>
-<div class="block">註冊含有多重實作方式的服務</div>
+<div class="block">註冊含有多重實作方式的服務, 如果先前已有註冊，將直接添加新的實作</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/ericlam/mc/eld/ServiceCollection.html#addSingleton(java.lang.Class)">addSingleton(Class&lt;?&gt;)</a></span> - Method in interface com.ericlam.mc.eld.<a href="com/ericlam/mc/eld/ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a></dt>
 <dd>
@@ -158,6 +158,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">B</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="com/ericlam/mc/eld/ServiceCollection.html#bindService(java.lang.Class,java.lang.Class)">bindService(Class&lt;T&gt;, Class&lt;L&gt;)</a></span> - Method in interface com.ericlam.mc.eld.<a href="com/ericlam/mc/eld/ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a></dt>
+<dd>
+<div class="block">註冊服務</div>
+</dd>
 <dt><span class="memberNameLink"><a href="com/ericlam/mc/eld/services/MessageService.MessageFactory.html#build()">build()</a></span> - Method in interface com.ericlam.mc.eld.services.<a href="com/ericlam/mc/eld/services/MessageService.MessageFactory.html" title="interface in com.ericlam.mc.eld.services">MessageService.MessageFactory</a></dt>
 <dd>
 <div class="block">生成訊息</div>
@@ -285,6 +289,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="com/ericlam/mc/eld/services/ItemStackService.ItemFactory.html#durability(int)">durability(int)</a></span> - Method in interface com.ericlam.mc.eld.services.<a href="com/ericlam/mc/eld/services/ItemStackService.ItemFactory.html" title="interface in com.ericlam.mc.eld.services">ItemStackService.ItemFactory</a></dt>
 <dd>
 <div class="block">修改耐久度</div>
+</dd>
+<dt><a href="com/ericlam/mc/eld/annotations/DynamicArg.html" title="annotation in com.ericlam.mc.eld.annotations"><span class="typeNameLink">DynamicArg</span></a> - Annotation Type in <a href="com/ericlam/mc/eld/annotations/package-summary.html">com.ericlam.mc.eld.annotations</a></dt>
+<dd>
+<div class="block">多態指令參數</div>
 </dd>
 </dl>
 <a id="I:E">
@@ -524,6 +532,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">自定義參數顯示</div>
 </dd>
+<dt><span class="memberNameLink"><a href="com/ericlam/mc/eld/annotations/DynamicArg.html#labels()">labels()</a></span> - Method in annotation type com.ericlam.mc.eld.annotations.<a href="com/ericlam/mc/eld/annotations/DynamicArg.html" title="annotation in com.ericlam.mc.eld.annotations">DynamicArg</a></dt>
+<dd>
+<div class="block">自定義參數顯示</div>
+</dd>
 <dt><a href="com/ericlam/mc/eld/components/LangConfiguration.html" title="class in com.ericlam.mc.eld.components"><span class="typeNameLink">LangConfiguration</span></a> - Class in <a href="com/ericlam/mc/eld/components/package-summary.html">com.ericlam.mc.eld.components</a></dt>
 <dd>
 <div class="block">用於定義訊息文件</div>
@@ -638,9 +650,25 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">可填參數</div>
 </dd>
+<dt><span class="memberNameLink"><a href="com/ericlam/mc/eld/annotations/DynamicArg.html#optional()">optional()</a></span> - Method in annotation type com.ericlam.mc.eld.annotations.<a href="com/ericlam/mc/eld/annotations/DynamicArg.html" title="annotation in com.ericlam.mc.eld.annotations">DynamicArg</a></dt>
+<dd>
+<div class="block">可填參數</div>
+</dd>
 <dt><span class="memberNameLink"><a href="com/ericlam/mc/eld/annotations/CommandArg.html#order()">order()</a></span> - Method in annotation type com.ericlam.mc.eld.annotations.<a href="com/ericlam/mc/eld/annotations/CommandArg.html" title="annotation in com.ericlam.mc.eld.annotations">CommandArg</a></dt>
 <dd>
 <div class="block">參數順序</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/ericlam/mc/eld/annotations/DynamicArg.html#order()">order()</a></span> - Method in annotation type com.ericlam.mc.eld.annotations.<a href="com/ericlam/mc/eld/annotations/DynamicArg.html" title="annotation in com.ericlam.mc.eld.annotations">DynamicArg</a></dt>
+<dd>
+<div class="block">參數順序</div>
+</dd>
+<dt><a href="com/ericlam/mc/eld/components/Overridable.html" title="interface in com.ericlam.mc.eld.components"><span class="typeNameLink">Overridable</span></a> - Interface in <a href="com/ericlam/mc/eld/components/package-summary.html">com.ericlam.mc.eld.components</a></dt>
+<dd>
+<div class="block">可覆蓋的服務</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/ericlam/mc/eld/ServiceCollection.html#overrideService(java.lang.Class,java.lang.Class)">overrideService(Class&lt;T&gt;, Class&lt;L&gt;)</a></span> - Method in interface com.ericlam.mc.eld.<a href="com/ericlam/mc/eld/ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a></dt>
+<dd>
+<div class="block">覆蓋服務</div>
 </dd>
 </dl>
 <a id="I:P">
@@ -773,6 +801,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="com/ericlam/mc/eld/services/ArgParserService.html#tryParse(java.lang.Class,java.util.Iterator,org.bukkit.command.CommandSender)">tryParse(Class&lt;T&gt;, Iterator&lt;String&gt;, CommandSender)</a></span> - Method in interface com.ericlam.mc.eld.services.<a href="com/ericlam/mc/eld/services/ArgParserService.html" title="interface in com.ericlam.mc.eld.services">ArgParserService</a></dt>
 <dd>
 <div class="block">嘗試解析參數</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/ericlam/mc/eld/annotations/DynamicArg.html#types()">types()</a></span> - Method in annotation type com.ericlam.mc.eld.annotations.<a href="com/ericlam/mc/eld/annotations/DynamicArg.html" title="annotation in com.ericlam.mc.eld.annotations">DynamicArg</a></dt>
+<dd>
+<div class="block">可能的參數類型 (順序)</div>
 </dd>
 </dl>
 <a id="I:U">

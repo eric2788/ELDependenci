@@ -10,49 +10,78 @@
 <pre><span class="sourceLineNo">001</span><a id="line.1">package com.ericlam.mc.eld;</a>
 <span class="sourceLineNo">002</span><a id="line.2"></a>
 <span class="sourceLineNo">003</span><a id="line.3">import com.ericlam.mc.eld.components.Configuration;</a>
-<span class="sourceLineNo">004</span><a id="line.4"></a>
-<span class="sourceLineNo">005</span><a id="line.5">import java.util.Map;</a>
-<span class="sourceLineNo">006</span><a id="line.6"></a>
-<span class="sourceLineNo">007</span><a id="line.7">/**</a>
-<span class="sourceLineNo">008</span><a id="line.8"> * 服務註冊器</a>
-<span class="sourceLineNo">009</span><a id="line.9"> */</a>
-<span class="sourceLineNo">010</span><a id="line.10">public interface ServiceCollection {</a>
-<span class="sourceLineNo">011</span><a id="line.11"></a>
-<span class="sourceLineNo">012</span><a id="line.12">    /**</a>
-<span class="sourceLineNo">013</span><a id="line.13">     * 註冊單例</a>
-<span class="sourceLineNo">014</span><a id="line.14">     * @param singleton 單例</a>
-<span class="sourceLineNo">015</span><a id="line.15">     * @return this</a>
-<span class="sourceLineNo">016</span><a id="line.16">     */</a>
-<span class="sourceLineNo">017</span><a id="line.17">    ServiceCollection addSingleton(Class&lt;?&gt; singleton);</a>
-<span class="sourceLineNo">018</span><a id="line.18"></a>
-<span class="sourceLineNo">019</span><a id="line.19">    /**</a>
-<span class="sourceLineNo">020</span><a id="line.20">     * 註冊服務</a>
-<span class="sourceLineNo">021</span><a id="line.21">     * @param service 服務類 (interface)</a>
-<span class="sourceLineNo">022</span><a id="line.22">     * @param implementation 該服務的實作類</a>
-<span class="sourceLineNo">023</span><a id="line.23">     * @param &lt;T&gt; 服務</a>
-<span class="sourceLineNo">024</span><a id="line.24">     * @param &lt;L&gt; 實作</a>
-<span class="sourceLineNo">025</span><a id="line.25">     * @return this</a>
-<span class="sourceLineNo">026</span><a id="line.26">     */</a>
-<span class="sourceLineNo">027</span><a id="line.27">    &lt;T, L extends T&gt; ServiceCollection addService(Class&lt;T&gt; service, Class&lt;L&gt; implementation);</a>
-<span class="sourceLineNo">028</span><a id="line.28"></a>
-<span class="sourceLineNo">029</span><a id="line.29">    /**</a>
-<span class="sourceLineNo">030</span><a id="line.30">     * 註冊含有多重實作方式的服務</a>
-<span class="sourceLineNo">031</span><a id="line.31">     * @param service 服務類 (interface)</a>
-<span class="sourceLineNo">032</span><a id="line.32">     * @param implementations 包含標識id的多重實作類比</a>
-<span class="sourceLineNo">033</span><a id="line.33">     * @param &lt;T&gt; 服務</a>
-<span class="sourceLineNo">034</span><a id="line.34">     * @return this</a>
-<span class="sourceLineNo">035</span><a id="line.35">     */</a>
-<span class="sourceLineNo">036</span><a id="line.36">    &lt;T&gt; ServiceCollection addServices(Class&lt;T&gt; service, Map&lt;String, Class&lt;? extends T&gt;&gt; implementations);</a>
-<span class="sourceLineNo">037</span><a id="line.37"></a>
-<span class="sourceLineNo">038</span><a id="line.38">    /**</a>
-<span class="sourceLineNo">039</span><a id="line.39">     * 新增文件配置</a>
-<span class="sourceLineNo">040</span><a id="line.40">     * @param config 文件映射物件類</a>
-<span class="sourceLineNo">041</span><a id="line.41">     * @param &lt;T&gt; 映射物件類</a>
-<span class="sourceLineNo">042</span><a id="line.42">     * @return this</a>
-<span class="sourceLineNo">043</span><a id="line.43">     */</a>
-<span class="sourceLineNo">044</span><a id="line.44">    &lt;T extends Configuration&gt; ServiceCollection addConfiguration(Class&lt;T&gt; config);</a>
-<span class="sourceLineNo">045</span><a id="line.45"></a>
-<span class="sourceLineNo">046</span><a id="line.46">}</a>
+<span class="sourceLineNo">004</span><a id="line.4">import com.ericlam.mc.eld.components.Overridable;</a>
+<span class="sourceLineNo">005</span><a id="line.5"></a>
+<span class="sourceLineNo">006</span><a id="line.6">import java.util.Map;</a>
+<span class="sourceLineNo">007</span><a id="line.7"></a>
+<span class="sourceLineNo">008</span><a id="line.8">/**</a>
+<span class="sourceLineNo">009</span><a id="line.9"> * 服務註冊器</a>
+<span class="sourceLineNo">010</span><a id="line.10"> */</a>
+<span class="sourceLineNo">011</span><a id="line.11">public interface ServiceCollection {</a>
+<span class="sourceLineNo">012</span><a id="line.12"></a>
+<span class="sourceLineNo">013</span><a id="line.13">    /**</a>
+<span class="sourceLineNo">014</span><a id="line.14">     * 註冊單例</a>
+<span class="sourceLineNo">015</span><a id="line.15">     * @param singleton 單例</a>
+<span class="sourceLineNo">016</span><a id="line.16">     * @return this</a>
+<span class="sourceLineNo">017</span><a id="line.17">     */</a>
+<span class="sourceLineNo">018</span><a id="line.18">    ServiceCollection addSingleton(Class&lt;?&gt; singleton);</a>
+<span class="sourceLineNo">019</span><a id="line.19"></a>
+<span class="sourceLineNo">020</span><a id="line.20">    /**</a>
+<span class="sourceLineNo">021</span><a id="line.21">     * 註冊服務</a>
+<span class="sourceLineNo">022</span><a id="line.22">     * @param service 服務類 (interface)</a>
+<span class="sourceLineNo">023</span><a id="line.23">     * @param implementation 該服務的實作類</a>
+<span class="sourceLineNo">024</span><a id="line.24">     * @param &lt;T&gt; 服務</a>
+<span class="sourceLineNo">025</span><a id="line.25">     * @param &lt;L&gt; 實作</a>
+<span class="sourceLineNo">026</span><a id="line.26">     * @return this</a>
+<span class="sourceLineNo">027</span><a id="line.27">     */</a>
+<span class="sourceLineNo">028</span><a id="line.28">    &lt;T, L extends T&gt; ServiceCollection bindService(Class&lt;T&gt; service, Class&lt;L&gt; implementation);</a>
+<span class="sourceLineNo">029</span><a id="line.29"></a>
+<span class="sourceLineNo">030</span><a id="line.30"></a>
+<span class="sourceLineNo">031</span><a id="line.31">    /**</a>
+<span class="sourceLineNo">032</span><a id="line.32">     * 覆蓋服務</a>
+<span class="sourceLineNo">033</span><a id="line.33">     * @param service 可覆蓋的服務類 (interface)</a>
+<span class="sourceLineNo">034</span><a id="line.34">     * @param implementation 新的實作</a>
+<span class="sourceLineNo">035</span><a id="line.35">     * @param &lt;T&gt; 可覆蓋的服務</a>
+<span class="sourceLineNo">036</span><a id="line.36">     * @param &lt;L&gt; 實作</a>
+<span class="sourceLineNo">037</span><a id="line.37">     * @return this</a>
+<span class="sourceLineNo">038</span><a id="line.38">     */</a>
+<span class="sourceLineNo">039</span><a id="line.39">    &lt;T extends Overridable, L extends T&gt; ServiceCollection overrideService(Class&lt;T&gt; service, Class&lt;L&gt; implementation);</a>
+<span class="sourceLineNo">040</span><a id="line.40"></a>
+<span class="sourceLineNo">041</span><a id="line.41"></a>
+<span class="sourceLineNo">042</span><a id="line.42">    /**</a>
+<span class="sourceLineNo">043</span><a id="line.43">     * 註冊服務, 如果已被註冊，則添加新的實作</a>
+<span class="sourceLineNo">044</span><a id="line.44">     * &lt;p&gt;&lt;/p&gt;</a>
+<span class="sourceLineNo">045</span><a id="line.45">     * 使用依賴注入時，請使用 {@code Set&lt;[Service]&gt; } 進行註冊</a>
+<span class="sourceLineNo">046</span><a id="line.46">     * @param service 服務類 (interface)</a>
+<span class="sourceLineNo">047</span><a id="line.47">     * @param implementation 新的實作</a>
+<span class="sourceLineNo">048</span><a id="line.48">     * @param &lt;T&gt; 服務</a>
+<span class="sourceLineNo">049</span><a id="line.49">     * @param &lt;L&gt; 實作</a>
+<span class="sourceLineNo">050</span><a id="line.50">     * @return this</a>
+<span class="sourceLineNo">051</span><a id="line.51">     */</a>
+<span class="sourceLineNo">052</span><a id="line.52">    &lt;T, L extends T&gt; ServiceCollection addService(Class&lt;T&gt; service, Class&lt;L&gt; implementation);</a>
+<span class="sourceLineNo">053</span><a id="line.53"></a>
+<span class="sourceLineNo">054</span><a id="line.54"></a>
+<span class="sourceLineNo">055</span><a id="line.55">    /**</a>
+<span class="sourceLineNo">056</span><a id="line.56">     * 註冊含有多重實作方式的服務, 如果先前已有註冊，將直接添加新的實作</a>
+<span class="sourceLineNo">057</span><a id="line.57">     * &lt;p&gt;&lt;/p&gt;</a>
+<span class="sourceLineNo">058</span><a id="line.58">     * 使用依賴注入時，請使用 {@code Map&lt;String, [Service]&gt; } 進行註冊</a>
+<span class="sourceLineNo">059</span><a id="line.59">     * @param service 服務類 (interface)</a>
+<span class="sourceLineNo">060</span><a id="line.60">     * @param implementations 包含標識id的多重實作類比</a>
+<span class="sourceLineNo">061</span><a id="line.61">     * @param &lt;T&gt; 服務</a>
+<span class="sourceLineNo">062</span><a id="line.62">     * @return this</a>
+<span class="sourceLineNo">063</span><a id="line.63">     */</a>
+<span class="sourceLineNo">064</span><a id="line.64">    &lt;T&gt; ServiceCollection addServices(Class&lt;T&gt; service, Map&lt;String, Class&lt;? extends T&gt;&gt; implementations);</a>
+<span class="sourceLineNo">065</span><a id="line.65"></a>
+<span class="sourceLineNo">066</span><a id="line.66"></a>
+<span class="sourceLineNo">067</span><a id="line.67">    /**</a>
+<span class="sourceLineNo">068</span><a id="line.68">     * 新增文件配置</a>
+<span class="sourceLineNo">069</span><a id="line.69">     * @param config 文件映射物件類</a>
+<span class="sourceLineNo">070</span><a id="line.70">     * @param &lt;T&gt; 映射物件類</a>
+<span class="sourceLineNo">071</span><a id="line.71">     * @return this</a>
+<span class="sourceLineNo">072</span><a id="line.72">     */</a>
+<span class="sourceLineNo">073</span><a id="line.73">    &lt;T extends Configuration&gt; ServiceCollection addConfiguration(Class&lt;T&gt; config);</a>
+<span class="sourceLineNo">074</span><a id="line.74"></a>
+<span class="sourceLineNo">075</span><a id="line.75">}</a>
 
 
 
