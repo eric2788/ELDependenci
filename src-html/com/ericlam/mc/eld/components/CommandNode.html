@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<main role="main">
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span><a id="line.1">package com.ericlam.mc.eld.components;</a>
+<span class="sourceLineNo">002</span><a id="line.2"></a>
+<span class="sourceLineNo">003</span><a id="line.3">import org.bukkit.command.CommandSender;</a>
+<span class="sourceLineNo">004</span><a id="line.4"></a>
+<span class="sourceLineNo">005</span><a id="line.5">import java.util.List;</a>
+<span class="sourceLineNo">006</span><a id="line.6"></a>
+<span class="sourceLineNo">007</span><a id="line.7">/**</a>
+<span class="sourceLineNo">008</span><a id="line.8"> * 用於定義指令</a>
+<span class="sourceLineNo">009</span><a id="line.9"> */</a>
+<span class="sourceLineNo">010</span><a id="line.10">public interface CommandNode {</a>
+<span class="sourceLineNo">011</span><a id="line.11"></a>
+<span class="sourceLineNo">012</span><a id="line.12">    /**</a>
+<span class="sourceLineNo">013</span><a id="line.13">     * 指令執行</a>
+<span class="sourceLineNo">014</span><a id="line.14">     * @param sender 指令發送者</a>
+<span class="sourceLineNo">015</span><a id="line.15">     */</a>
+<span class="sourceLineNo">016</span><a id="line.16">    void execute(CommandSender sender);</a>
+<span class="sourceLineNo">017</span><a id="line.17"></a>
+<span class="sourceLineNo">018</span><a id="line.18">    /**</a>
+<span class="sourceLineNo">019</span><a id="line.19">     * 自動完成</a>
+<span class="sourceLineNo">020</span><a id="line.20">     * @param sender 指令發送者</a>
+<span class="sourceLineNo">021</span><a id="line.21">     * @param args 參數</a>
+<span class="sourceLineNo">022</span><a id="line.22">     * @return 自動完成列表</a>
+<span class="sourceLineNo">023</span><a id="line.23">     */</a>
+<span class="sourceLineNo">024</span><a id="line.24">    default List&lt;String&gt; tabComplete(CommandSender sender, List&lt;String&gt; args) {</a>
+<span class="sourceLineNo">025</span><a id="line.25">        return null;</a>
+<span class="sourceLineNo">026</span><a id="line.26">    }</a>
+<span class="sourceLineNo">027</span><a id="line.27"></a>
+<span class="sourceLineNo">028</span><a id="line.28">}</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</main>
+</body>
+</html>
