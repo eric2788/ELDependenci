@@ -458,11 +458,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="com/ericlam/mc/eld/services/ConfigPoolService.html#getPool(java.lang.Class)">getPool(Class&lt;C&gt;)</a></span> - Method in interface com.ericlam.mc.eld.services.<a href="com/ericlam/mc/eld/services/ConfigPoolService.html" title="interface in com.ericlam.mc.eld.services">ConfigPoolService</a></dt>
 <dd>
-<div class="block">同步獲取文件池快取</div>
+<div class="block">從快取獲取文件池，若快取並無此文件池，則為 null</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/ericlam/mc/eld/services/ConfigPoolService.html#getPoolAsync(java.lang.Class)">getPoolAsync(Class&lt;C&gt;)</a></span> - Method in interface com.ericlam.mc.eld.services.<a href="com/ericlam/mc/eld/services/ConfigPoolService.html" title="interface in com.ericlam.mc.eld.services">ConfigPoolService</a></dt>
 <dd>
-<div class="block">異步獲取文件池</div>
+<div class="block">異步獲取文件池。若快取已有，則直接從快取獲取。</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/ericlam/mc/eld/controllers/LangController.html#getPrefix()">getPrefix()</a></span> - Method in interface com.ericlam.mc.eld.controllers.<a href="com/ericlam/mc/eld/controllers/LangController.html" title="interface in com.ericlam.mc.eld.controllers">LangController</a></dt>
 <dd>
