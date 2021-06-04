@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6};
+var data = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,7 +123,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <hr>
-<pre>public interface <a href="../../../../src-html/com/ericlam/mc/eld/ServiceCollection.html#line.12">ServiceCollection</a></pre>
+<pre>public interface <a href="../../../../src-html/com/ericlam/mc/eld/ServiceCollection.html#line.13">ServiceCollection</a></pre>
 <div class="block">服務註冊器</div>
 </li>
 </ul>
@@ -160,6 +160,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>&lt;T extends <a href="components/GroupLangConfiguration.html" title="class in com.ericlam.mc.eld.components">GroupLangConfiguration</a>&gt;<br><a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addMultipleLanguages(java.lang.Class)">addMultipleLanguages</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;lang)</code></th>
+<td class="colLast">
+<div class="block">新增訊息文件池</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>&lt;T,&#8203;L extends T&gt;<br><a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addService(java.lang.Class,java.lang.Class)">addService</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;service,
           <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;L&gt;&nbsp;implementation)</code></th>
@@ -167,7 +174,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">註冊服務, 如果已被註冊，則添加新的實作</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>&lt;T&gt;&nbsp;<a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addServices(java.lang.Class,java.util.Map)">addServices</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;service,
            <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends T&gt;&gt;&nbsp;implementations)</code></th>
@@ -175,14 +182,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">註冊含有多重實作方式的服務, 如果先前已有註冊，將直接添加新的實作</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addSingleton(java.lang.Class)">addSingleton</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;?&gt;&nbsp;singleton)</code></th>
 <td class="colLast">
 <div class="block">註冊單例</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>&lt;T,&#8203;L extends T&gt;<br><a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#bindService(java.lang.Class,java.lang.Class)">bindService</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;service,
            <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;L&gt;&nbsp;implementation)</code></th>
@@ -190,7 +197,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">註冊服務</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>&lt;T extends <a href="components/Overridable.html" title="interface in com.ericlam.mc.eld.components">Overridable</a>,&#8203;L extends T&gt;<br><a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#overrideService(java.lang.Class,java.lang.Class)">overrideService</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;service,
                <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;L&gt;&nbsp;implementation)</code></th>
@@ -221,7 +228,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>addSingleton</h4>
-<pre class="methodSignature"><a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a>&nbsp;<a href="../../../../src-html/com/ericlam/mc/eld/ServiceCollection.html#line.19">addSingleton</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;?&gt;&nbsp;singleton)</pre>
+<pre class="methodSignature"><a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a>&nbsp;<a href="../../../../src-html/com/ericlam/mc/eld/ServiceCollection.html#line.20">addSingleton</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;?&gt;&nbsp;singleton)</pre>
 <div class="block">註冊單例</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -237,7 +244,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>bindService</h4>
-<pre class="methodSignature">&lt;T,&#8203;L extends T&gt;&nbsp;<a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a>&nbsp;<a href="../../../../src-html/com/ericlam/mc/eld/ServiceCollection.html#line.29">bindService</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;service,
+<pre class="methodSignature">&lt;T,&#8203;L extends T&gt;&nbsp;<a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a>&nbsp;<a href="../../../../src-html/com/ericlam/mc/eld/ServiceCollection.html#line.30">bindService</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;service,
                                                     <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;L&gt;&nbsp;implementation)</pre>
 <div class="block">註冊服務</div>
 <dl>
@@ -258,7 +265,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>overrideService</h4>
-<pre class="methodSignature">&lt;T extends <a href="components/Overridable.html" title="interface in com.ericlam.mc.eld.components">Overridable</a>,&#8203;L extends T&gt;&nbsp;<a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a>&nbsp;<a href="../../../../src-html/com/ericlam/mc/eld/ServiceCollection.html#line.40">overrideService</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;service,
+<pre class="methodSignature">&lt;T extends <a href="components/Overridable.html" title="interface in com.ericlam.mc.eld.components">Overridable</a>,&#8203;L extends T&gt;&nbsp;<a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a>&nbsp;<a href="../../../../src-html/com/ericlam/mc/eld/ServiceCollection.html#line.41">overrideService</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;service,
                                                                             <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;L&gt;&nbsp;implementation)</pre>
 <div class="block">覆蓋服務</div>
 <dl>
@@ -279,7 +286,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>addService</h4>
-<pre class="methodSignature">&lt;T,&#8203;L extends T&gt;&nbsp;<a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a>&nbsp;<a href="../../../../src-html/com/ericlam/mc/eld/ServiceCollection.html#line.53">addService</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;service,
+<pre class="methodSignature">&lt;T,&#8203;L extends T&gt;&nbsp;<a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a>&nbsp;<a href="../../../../src-html/com/ericlam/mc/eld/ServiceCollection.html#line.54">addService</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;service,
                                                    <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;L&gt;&nbsp;implementation)</pre>
 <div class="block">註冊服務, 如果已被註冊，則添加新的實作
  <p></p>
@@ -302,7 +309,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>addServices</h4>
-<pre class="methodSignature">&lt;T&gt;&nbsp;<a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a>&nbsp;<a href="../../../../src-html/com/ericlam/mc/eld/ServiceCollection.html#line.65">addServices</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;service,
+<pre class="methodSignature">&lt;T&gt;&nbsp;<a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a>&nbsp;<a href="../../../../src-html/com/ericlam/mc/eld/ServiceCollection.html#line.66">addServices</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;service,
                                   <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends T&gt;&gt;&nbsp;implementations)</pre>
 <div class="block">註冊含有多重實作方式的服務, 如果先前已有註冊，將直接添加新的實作
  <p></p>
@@ -324,7 +331,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <h4>addConfiguration</h4>
-<pre class="methodSignature">&lt;T extends <a href="components/Configuration.html" title="class in com.ericlam.mc.eld.components">Configuration</a>&gt;&nbsp;<a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a>&nbsp;<a href="../../../../src-html/com/ericlam/mc/eld/ServiceCollection.html#line.74">addConfiguration</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;config)</pre>
+<pre class="methodSignature">&lt;T extends <a href="components/Configuration.html" title="class in com.ericlam.mc.eld.components">Configuration</a>&gt;&nbsp;<a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a>&nbsp;<a href="../../../../src-html/com/ericlam/mc/eld/ServiceCollection.html#line.75">addConfiguration</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;config)</pre>
 <div class="block">新增文件配置</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
@@ -339,16 +346,34 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <a id="addGroupConfiguration(java.lang.Class)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>addGroupConfiguration</h4>
-<pre class="methodSignature">&lt;T extends <a href="components/GroupConfiguration.html" title="class in com.ericlam.mc.eld.components">GroupConfiguration</a>&gt;&nbsp;<a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a>&nbsp;<a href="../../../../src-html/com/ericlam/mc/eld/ServiceCollection.html#line.82">addGroupConfiguration</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;config)</pre>
+<pre class="methodSignature">&lt;T extends <a href="components/GroupConfiguration.html" title="class in com.ericlam.mc.eld.components">GroupConfiguration</a>&gt;&nbsp;<a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a>&nbsp;<a href="../../../../src-html/com/ericlam/mc/eld/ServiceCollection.html#line.83">addGroupConfiguration</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;config)</pre>
 <div class="block">新增文件池</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
 <dd><code>T</code> - 映射物件類</dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>config</code> - 文件</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this</dd>
+</dl>
+</li>
+</ul>
+<a id="addMultipleLanguages(java.lang.Class)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>addMultipleLanguages</h4>
+<pre class="methodSignature">&lt;T extends <a href="components/GroupLangConfiguration.html" title="class in com.ericlam.mc.eld.components">GroupLangConfiguration</a>&gt;&nbsp;<a href="ServiceCollection.html" title="interface in com.ericlam.mc.eld">ServiceCollection</a>&nbsp;<a href="../../../../src-html/com/ericlam/mc/eld/ServiceCollection.html#line.92">addMultipleLanguages</a>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;T&gt;&nbsp;lang)</pre>
+<div class="block">新增訊息文件池</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>T</code> - 映射物件類</dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>lang</code> - 訊息文件</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this</dd>
 </dl>
